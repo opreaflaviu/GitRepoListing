@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/layout_padding_8dp"
+    android:background="@color/purple_200"
+    tools:context=".ui.fragments.detailsfragment.DetailsFragment">
+
+    <ScrollView
+        android:id="@+id/detailPageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detailImageView"
+                android:layout_width="@dimen/image_view_size_80dp"
+                android:layout_height="@dimen/image_view_size_80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/detailUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/detailImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/detailUserProfileURL"
+                android:layout_marginBottom="@dimen/list_item_margin_2dp"
+                android:layout_marginStart="@dimen/list_item_margin_top_8dp"
+                app:drawableStartCompat="@drawable/ic_person"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/title_size_16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:text="user name"/>
+
+            <TextView
+                android:id="@+id/detailUserProfileURL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/detailImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/detailImageView"
+                android:layout_marginStart="@dimen/list_item_margin_top_8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/title_size_16sp"
+                android:textColor="@color/white"
+                tools:text="user"/>
+
+            <TextView
+                android:id="@+id/textViewAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/detailImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/layout_margin_30dp"
+                android:text="@string/about"
+                android:textSize="@dimen/subtitle_size_20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewRepoName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewAbout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/list_item_margin_top_8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/about"
+                android:textSize="@dimen/title_size_16sp"
+                android:textColor="@color/black"
+                tools:text="@string/repo_name"/>
+
+            <TextView
+                android:id="@+id/textViewRepoURL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewRepoName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/list_item_margin_top_8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/title_size_16sp"
+                android:textColor="@color/black"
+                tools:text="@string/repo_url"/>
+
+            <TextView
+                android:id="@+id/textViewWatchers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewRepoURL"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/list_item_margin_top_8dp"
+                android:text="@string/about"
+                android:textSize="@dimen/title_size_16sp"
+                android:textColor="@color/black"
+                tools:text="@string/watchers"/>
+
+            <TextView
+                android:id="@+id/textViewForksCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewWatchers"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/list_item_margin_top_8dp"
+                android:textSize="@dimen/title_size_16sp"
+                android:textColor="@color/black"
+                tools:text="@string/fork_count"/>
+
+            <TextView
+                android:id="@+id/textViewReadme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewForksCount"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/layout_margin_30dp"
+                android:text="@string/readme"
+                android:textSize="@dimen/subtitle_size_20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewReadmeContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewReadme"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/list_item_margin_top_8dp"
+                android:textSize="@dimen/title_size_16sp"
+                android:textColor="@color/black"
+                tools:text="@string/long_tools_text"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/detailPageProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/detailPageNoResultsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/loading_error_message_margin_8dp"
+        android:text="@string/results_could_not_be_loaded"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

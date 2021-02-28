@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/list_item_margin_top_8dp"
+    android:background="@color/purple_200"
+    android:layout_marginTop="@dimen/list_item_margin_2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/listItemRepoName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/list_item_margin_start_12dp"
+        android:textSize="@dimen/title_size_16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="Repository name"/>
+
+    <TextView
+        android:id="@+id/listItemRepoStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/listItemRepoName"
+        app:layout_constraintTop_toBottomOf="@id/listItemRepoName"
+        android:layout_marginTop="@dimen/list_item_margin_top_8dp"
+        app:drawableStartCompat="@drawable/ic_star"
+        android:gravity="center_vertical"
+        tools:text="12"
+        android:textSize="@dimen/title_size_16sp"
+        android:textColor="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
