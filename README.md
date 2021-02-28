@@ -7,3 +7,4 @@ Libraries used:
 -Hilt dependency injection
 -Coroutines
 -Retrofit
+-View Binding
